@@ -182,7 +182,7 @@ int allOddBits(int x) {
  *   Rating: 2
  */
 int negate(int x) {
-  return (~x)+1;
+  return (~x)+ 1;
 }
 //3
 /* 
@@ -327,7 +327,7 @@ unsigned float_i2f(int x) {
  */
 int float_f2i(unsigned uf) {
   unsigned s,e,f,i;
-  s=uf>>31;
+  s=uf&0x80000000;
   e=(uf>>23)&0xFF;
   f=uf&0x7FFFFF;
   i=f;
